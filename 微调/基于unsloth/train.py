@@ -95,7 +95,7 @@ def convert_to_alpaca_format(examples):
                 # 如果没有response标签，尝试获取think标签之后的内容
                 response_part = assistant_answer[think_end+8:].strip()
         
-        # 构建Alpaca格式的对话
+        # 构建chatML格式的对话
         conversation = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_question},
